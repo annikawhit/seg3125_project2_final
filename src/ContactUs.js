@@ -5,7 +5,7 @@ const ContactUs = () => {
 
             <div className="rowContactUs" id="contact">
                             
-                <div>
+                <div id="contactus_table1">
                     <h4>Hours of Operation</h4>
                     <table>
                         <tr><th>Monday</th><td>10am - 7pm</td></tr>
@@ -18,7 +18,7 @@ const ContactUs = () => {
                     </table>
                 </div>
                 
-                <div>
+                <div id="contactus_table2">
                     <h4>Address</h4>
                     <table id="address">
                         <tr><td>75 Laurier Ave E</td></tr>
@@ -32,6 +32,8 @@ const ContactUs = () => {
                     </table>
                 </div>
             </div>
+
+            
         </div>
     );
 }

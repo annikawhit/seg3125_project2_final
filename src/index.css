@@ -96,8 +96,10 @@
 .rowGallery{
   display: flex;
   flex-direction: row;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .rowGallery #text{
@@ -105,13 +107,10 @@
   padding-left: 3%;
 }
 
-#gallery_arrow{
-  background-color:black;
-}
 
 #image {
   height:auto;
-  max-width:100%;
+  max-width:50%;
 }
 
 #text{
@@ -131,12 +130,10 @@
 /*contactus*/
 
 .rowContactUs{
-  display: flex;
+  display: grid;
   flex-direction: row;
-}
-
-#contact #address td{
-  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  
 }
 
 /*footer*/
