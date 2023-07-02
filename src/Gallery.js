@@ -27,7 +27,7 @@ const Gallery = () => {
                                 <h3 id="text">Student Name: Josephine</h3>
                                 <h3 id="text">Class Name: Watercolours for beginners</h3>
                                 <p id="text">Description: I was able to create this watercolour painting of a bird during my first set of lessons at Imagine Art Studio.</p>
-                                <Link class="btn btn-secondary border-0" id="link" to="/classes">Send a Comment to the Artist</Link>
+                                <Link class="btn btn-secondary border-0" id="link" to="/classes">Send Feedback</Link>
                             </div>
                         </div>
                         

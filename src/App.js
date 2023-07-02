@@ -16,16 +16,16 @@ function App() {
 
         <div className="content">
           <Switch>
-            <Route exact path="/"> 
+            <Route exact path="/seg3125_project2/"> 
               <Home />
             </Route>
-            <Route path="/classes"> 
+            <Route path="/seg3125_project2/classes"> 
               <Classes />
             </Route>
-            <Route path="/gallery"> 
+            <Route path="/seg3125_project2/gallery"> 
               <Gallery />
             </Route>
-            <Route path="/contactus"> 
+            <Route path="/seg3125_project2/contactus"> 
               <ContactUs />
             </Route>
           </Switch>
