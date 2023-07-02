@@ -5,36 +5,28 @@ import Classes from './Classes';
 import Gallery from './Gallery';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    
       <div className="App">
 
         <NavBar />
 
         <div className="content">
-          <Switch>
-            <Route exact path="/"> 
-              <Home />
-            </Route>
-            <Route path="/classes"> 
-              <Classes />
-            </Route>
-            <Route path="/gallery"> 
-              <Gallery />
-            </Route>
-            <Route path="/contactus"> 
-              <ContactUs />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />}> </Route>
+            <Route path="/classes" element={<Classes />}></Route>
+            <Route path="/gallery" element={<Gallery />}></Route>
+            <Route path="/contactus" element={<ContactUs />}></Route>
+          </Routes>
         </div>
 
         <Footer />
 
       </div>
-    </Router>
+    
     
   );
 }

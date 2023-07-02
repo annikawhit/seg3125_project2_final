@@ -1,8 +1,10 @@
 const Classes = () => {
     return (  
         <div className="classes">
-            <h1>Classes</h1>
+            <h1>Select a Class</h1>
         </div>
+
+        
     );
 }
 
