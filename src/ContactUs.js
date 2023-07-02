@@ -26,14 +26,14 @@ const ContactUs = () => {
                         <tr><td>K1N 6N5</td></tr>
                     </table>
 
-                    <table>
+                    <table id="email_phone">
                         <tr><th>Email:</th><td>contactus@imagineartstudio.ca</td></tr>
                         <tr><th>Phone:</th><td>613-456-7890</td></tr>
                     </table>
                 </div>
             </div>
 
-            
+
         </div>
     );
 }
