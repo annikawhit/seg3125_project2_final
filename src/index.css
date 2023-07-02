@@ -6,6 +6,7 @@
   color:black;
 }
 
+/*navbar*/
 .navbar{
   padding: 20px;
   display: flex;
@@ -14,17 +15,14 @@
   border-bottom: 1px solid white;
 }
 
-.navbar a {
-  margin-left: 16px;
+.navbar #link{
+  color: black;
+  margin-left: 2px;
   text-decoration: none;
   padding: 6px;
 }
 
-.navbar .links{
-  margin-left: auto;
-}
-
-.navbar a:hover{
+.navbar #link:hover{
   color:dimgrey;
 }
 
@@ -89,4 +87,25 @@
 
 #landing_page .btn:hover {
   background-color:dimgrey;
+}
+
+
+
+
+/*footer*/
+#footer{
+  text-align: center;
+}
+
+#footer #link{
+  border-radius: 0.5vw;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  margin: 0 auto;
+  color:black;
+}
+
+#footer #link:hover {
+  color:dimgrey;
 }

@@ -4,6 +4,7 @@ import Home from './home';
 import Classes from './Classes';
 import Gallery from './Gallery';
 import ContactUs from './ContactUs';
+import Footer from './Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
             </Route>
           </Switch>
         </div>
+
+        <Footer />
+
       </div>
     </Router>
     
