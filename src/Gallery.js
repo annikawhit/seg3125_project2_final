@@ -15,31 +15,31 @@ const Gallery = () => {
             <CCarousel controls>
                     <CCarouselItem>
                         <div className="rowGallery" id="gallery">
-                            <div id="image">
-                                <img class="d-block w-100" src={image1} alt="First slide"></img>
-                            </div>
-                            
-                            <div>
-                                <h3 id="text">Student Name: Josephine</h3>
-                                <h3 id="text">Class Name: Watercolours painting for beginners</h3>
-                                <p id="text">Description: I was able to create this watercolour painting of a bird during my first set of lessons at Imagine Art Studio. Thank you to my instructors for all their help.</p>
-                                <Link class="btn btn-secondary border-0" id="link" to="/classes">Send Feedback</Link>
-                            </div>
+                                <div id="image">
+                                    <img class="d-block w-100" src={image1} alt="First slide"></img>
+                                </div>
+                                
+                                <div>
+                                    <h3 id="text">Student Name: Josephine</h3>
+                                    <h3 id="text">Class Name: Watercolours painting for beginners</h3>
+                                    <p id="text">Description: I was able to create this watercolour painting of a bird during my first set of lessons at Imagine Art Studio. Thank you to my instructors for all their help.</p>
+                                    <Link class="btn btn-secondary border-0" id="link" to="/classes">Send Feedback</Link>
+                                </div>
                         </div>
                     </CCarouselItem>
                     <CCarouselItem>
-                    <div className="rowGallery" id="gallery">
-                            <div id="image">
-                                <img class="d-block w-100" src={image2} alt="First slide"></img>
+                        <div className="rowGallery" id="gallery">
+                                <div id="image">
+                                    <img class="d-block w-100" src={image2} alt="First slide"></img>
+                                </div>
+                                
+                                <div>
+                                    <h3 id="text">Student Name: Helen</h3>
+                                    <h3 id="text">Class Name: Pottery for advanced students</h3>
+                                    <p id="text">Description: Last week, I took my first advanced class at Imagine Art Studio. During the class, the instructor helped me create this beautiful piece of pottery.</p>
+                                    <Link class="btn btn-secondary border-0" id="link" to="/classes">Send Feedback</Link>
+                                </div>
                             </div>
-                            
-                            <div>
-                                <h3 id="text">Student Name: Helen</h3>
-                                <h3 id="text">Class Name: Pottery for advanced students</h3>
-                                <p id="text">Description: Last week, I took my first advanced class at Imagine Art Studio. During the class, the instructor helped me create this beautiful piece of pottery.</p>
-                                <Link class="btn btn-secondary border-0" id="link" to="/classes">Send Feedback</Link>
-                            </div>
-                        </div>
                     </CCarouselItem>
                     <CCarouselItem>
                     <div className="rowGallery" id="gallery">

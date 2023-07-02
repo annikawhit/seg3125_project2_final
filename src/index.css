@@ -107,12 +107,17 @@
 .rowGallery{
   display: flex;
   flex-direction: row;
-  padding-left: 18%;
-  padding-right: 18%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  
+  margin-left: 18%;
+  margin-right: 18%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   height: 80%;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .rowGallery #text{
