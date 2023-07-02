@@ -8,7 +8,7 @@ const Home = () => {
             <div id="text-block">
                 <h1>Imagine Art Studio</h1>
                 <p class="my-1">Explore the world of art with us.</p>
-                <Link class="btn btn-secondary" id="home_btn" to="/classes">View our available classes!</Link>
+                <Link class="btn btn-secondary" id="home_btn" to="/seg3125_project2/classes">View our available classes!</Link>
             </div>
             
         </div>
