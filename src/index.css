@@ -26,6 +26,7 @@
   color:dimgrey;
 }
 
+/*home*/
 .content{
   text-align: center;
 }
@@ -90,7 +91,53 @@
 }
 
 
+/*gallery*/
 
+.rowGallery{
+  display: flex;
+  flex-direction: row;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.rowGallery #text{
+  text-align: left;
+  padding-left: 3%;
+}
+
+#gallery_arrow{
+  background-color:black;
+}
+
+#image {
+  height:auto;
+  max-width:100%;
+}
+
+#text{
+  font-size: 100%;
+}
+
+.rowGallery #link{
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+
+.rowGallery #link:hover{
+  background-color:dimgrey;
+}
+
+/*contactus*/
+
+.rowContactUs{
+  display: flex;
+  flex-direction: row;
+}
+
+#contact #address td{
+  text-align: center;
+}
 
 /*footer*/
 #footer{
