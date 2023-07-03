@@ -7,7 +7,9 @@ import ContactUs from './ContactUs';
 import Footer from './Footer';
 import { Route, Routes } from 'react-router-dom';
 
+
 function App() {
+
   return (
     
       <div className="App">
@@ -25,6 +27,7 @@ function App() {
 
         <Footer />
 
+        
       </div>
     
     
