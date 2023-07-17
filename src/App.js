@@ -18,10 +18,10 @@ function App() {
 
         <div className="content">
           <Routes >
-              <Route exact path="/seg3125_project2" element={<Home />}> </Route>
-              <Route exact path="/seg3125_project2/classes" element={<Classes />}></Route>
-              <Route exact path="/seg3125_project2/gallery" element={<Gallery />}></Route>
-              <Route exact path="/seg3125_project2/contactus" element={<ContactUs />}></Route>
+              <Route exact path="/seg3125_project2_final" element={<Home />}> </Route>
+              <Route exact path="/seg3125_project2_final/classes" element={<Classes />}></Route>
+              <Route exact path="/seg3125_project2_final/gallery" element={<Gallery />}></Route>
+              <Route exact path="/seg3125_project2_final/contactus" element={<ContactUs />}></Route>
           </Routes>
         </div>
 
