@@ -93,15 +93,40 @@
 /*classes*/
 .classes{
   padding-top: 3%;
+  overflow-x: hidden;
 }
 
+.classes #filters{
+  text-align: left;
+}
+
+#class_details{
+  font-size: 90%;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: contain;
+}
+
+
+#class_details td{
+  padding-left: 10%;
+}
 
 
 /*gallery*/
 
 .gallery{
-  background-color:lightgray;
+  background-color:dimgray;
   padding-top: 3%;
+}
+
+.gallery h1{
+  color: white;
 }
 
 .rowGallery{
