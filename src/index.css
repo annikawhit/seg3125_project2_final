@@ -104,6 +104,7 @@
   font-size: 90%;
   text-align: left;
   margin-bottom: 10%;
+  min-height: 20vw;
 }
 
 .card-img-top {
@@ -112,9 +113,13 @@
   object-fit: contain;
 }
 
+.card {
+  min-height: 100%;
+}
+
 
 #class_details td{
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 
@@ -205,6 +210,67 @@
 .contactus{
   padding-top: 3%;
 }
+
+
+/*register*/
+
+#date_time_card {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+}
+
+.card-container {
+  width: 280px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
+#cell {
+  min-height: 60px;
+}
+
+#block {
+  min-height: 60px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+
+#class_details{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register h2{
+  margin-top:2%;
+}
+
+
+/*confirmation*/ 
+
+#booking_table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th{
+  text-align: right;
+  font-weight: 900;
+}
+
+
 
 /*footer*/
 #footer{

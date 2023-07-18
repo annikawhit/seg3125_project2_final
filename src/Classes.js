@@ -126,7 +126,7 @@ const Classes = () => {
                                                     <tr><th></th><td>{dateTime2}</td></tr>
                                                     <tr><th></th><td>{dateTime3}</td></tr>
                                                 </table>
-                                                <button className="btn btn-dark">Register</button>
+                                                <Link class="btn btn-dark" id="register_btn" to="/seg3125_project2_final/register">Register</Link>
                                             </div>
                                         </div>
                                     </div>
