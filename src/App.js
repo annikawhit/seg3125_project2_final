@@ -7,6 +7,7 @@ import ContactUs from './ContactUs';
 import Register from './Register';
 import Confirmation from './Confirmation';
 import Footer from './Footer';
+import NotFoundPage from './NotFoundPage';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/seg3125_project2_final/contactus" element={<ContactUs />}></Route>
               <Route exact path="/seg3125_project2_final/register" element={<Register />}></Route>
               <Route exact path="/seg3125_project2_final/confirmation" element={<Confirmation />}></Route>
+              <Route path="*" element={<NotFoundPage />}></Route>
           </Routes>
         </div>
 

@@ -4,9 +4,29 @@ import ClassCards from './ClassCards';
 
 const Classes = () => {
     const [data, setData]=useState(ClassCards);
-    const filterResult=(item)=>{
+    const filterTypeResult=(item)=>{
         const result=ClassCards.filter((currentData)=>{
-            return currentData.classcard===item;
+            return currentData.type===item;
+        });
+        setData(result);
+    }
+
+    const filterLevelResult=(item)=>{
+        const result=ClassCards.filter((currentData)=>{
+            return currentData.level===item;
+        });
+        setData(result);
+    }
+
+    const filterLengthResult=(item)=>{
+        const result=ClassCards.filter((currentData)=>{
+            return currentData.length===item;
+        });
+        setData(result);
+    }
+    const filterSizeResult=(item)=>{
+        const result=ClassCards.filter((currentData)=>{
+            return currentData.size===item;
         });
         setData(result);
     }
@@ -22,19 +42,19 @@ const Classes = () => {
                         <h3 className='mb-3'>Filters</h3>
                         <h4>Type</h4>
                         <div className="form-check">
-                            <input className="form-check-input" onClick={() => filterResult("Painting")} type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterTypeResult("Painting")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Painting
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterTypeResult("Sculpting")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Sculpting
                             </label>
                         </div>
                         <div className="form-check mb-4">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterTypeResult("Drawing")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Drawing
                             </label>
@@ -42,19 +62,19 @@ const Classes = () => {
 
                         <h4>Level</h4>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterLevelResult("Beginner")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Beginner
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterLevelResult("Intermediate")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Intermediate
                             </label>
                         </div>
                         <div className="form-check mb-4">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input"  onChange={() => filterLevelResult("Advanced")}type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Advanced
                             </label>
@@ -63,19 +83,19 @@ const Classes = () => {
 
                         <h4>Course Length</h4>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterLengthResult("1 day")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 1 day
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterLengthResult("2 days")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 2 days
                             </label>
                         </div>
                         <div className="form-check mb-4">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterLengthResult("5 days")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 5 days
                             </label>
@@ -84,19 +104,19 @@ const Classes = () => {
 
                         <h4>Class Size</h4>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterSizeResult("Small (5 students)")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Small (5 students)
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterSizeResult("Medium (10 students)")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Medium (10 students)
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                            <input className="form-check-input" onChange={() => filterSizeResult("Large (20 students)")} type="checkbox" value="" id="flexCheckDefault"></input>
                             <label className="form-check-label" for="flexCheckDefault">
                                 Large (20 students)
                             </label>
@@ -107,7 +127,7 @@ const Classes = () => {
                     <div className="col-md-9">
                         <div className="row">
                         {data.map((values)=>{
-                            const {id,title,image,level,rating,instructor,length,size,dateTime1,dateTime2,dateTime3}=values;
+                            const {id,title,image,type,level,rating,instructor,length,size,dateTime1,dateTime2,dateTime3}=values;
                             return(
                                 
                                 <>
@@ -117,6 +137,7 @@ const Classes = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">{title}</h5>
                                                 <table id="class_details">
+                                                    <tr><th>Type:</th><td>{type}</td></tr>
                                                     <tr><th>Level:</th><td>{level}</td></tr>
                                                     <tr><th>Rating:</th><td>{rating}</td></tr>
                                                     <tr><th>Instructor:</th><td>{instructor}</td></tr>

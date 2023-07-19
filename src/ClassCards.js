@@ -1,6 +1,6 @@
-import image1 from "./images/painting.jpeg";
-import image2 from "./images/sculpting.jpeg";
-import image3 from "./images/drawing.jpeg";
+import image1 from './images/painting.jpeg';
+import image2 from './images/sculpting.jpeg';
+import image3 from './images/drawing.jpeg';
 
 const ClassCards=[
 
@@ -8,6 +8,7 @@ const ClassCards=[
         id:1,
         title:"Introduction to Painting",
         image:{image1},
+        type:"Painting",
         level:"Beginner",
         rating:"5 stars",
         instructor:"Evelyn",
@@ -22,6 +23,7 @@ const ClassCards=[
         id:2,
         title:"Introduction to Sculpture",
         image:{image2},
+        type:"Sculpting",
         level:"Beginner",
         rating:"4 stars",
         instructor:"Suzan",
@@ -36,6 +38,7 @@ const ClassCards=[
         id:3,
         title:"Introduction to Drawing",
         image:{image3},
+        type:"Drawing",
         level:"Beginner",
         rating:"4.5 stars",
         instructor:"Felix",
@@ -50,6 +53,7 @@ const ClassCards=[
         id:4,
         title:"Explore Drawing",
         image:{image3},
+        type:"Drawing",
         level:"Intermediate",
         rating:"4 stars",
         instructor:"Suzan",
@@ -64,6 +68,7 @@ const ClassCards=[
         id: 5,
         title:"Explore Painting",
         image:{image3},
+        type:"Painting",
         level:"Intermediate",
         rating:"3.5 stars",
         instructor:"Felix",
@@ -78,6 +83,7 @@ const ClassCards=[
         id:6,
         title:"Explore Sculpting",
         image:{image3},
+        type:"Sculpting",
         level:"Intermediate",
         rating:"5 stars",
         instructor:"Evelyn",
@@ -92,6 +98,7 @@ const ClassCards=[
         id:7,
         title:"Advanced Sculpting",
         image:{image3},
+        type:"Sculpting",
         level:"Advanced",
         rating:"4.5 stars",
         instructor:"Felix",
@@ -106,6 +113,7 @@ const ClassCards=[
         id: 8,
         title:"Advanced Drawing",
         image:{image3},
+        type:"Drawing",
         level:"Advanced",
         rating:"5 stars",
         instructor:"Evelyn",
@@ -120,6 +128,7 @@ const ClassCards=[
         id:9,
         title:"Advanced Painting",
         image:{image3},
+        type:"Painting",
         level:"Advanced",
         rating:"4 stars",
         instructor:"Suzan",

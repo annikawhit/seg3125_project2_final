@@ -6,7 +6,7 @@ const Register = () => {
             <h1>Register for an Art Class</h1>
 
             <h2>1. Class information:</h2>
-            <table id="class_details">
+            <table id="details_table">
                 <tr><th>Class Name:</th><td>"test"</td></tr>
                 <tr><th>Instructor:</th><td>"test"</td></tr>
             </table>
@@ -77,8 +77,8 @@ const Register = () => {
                         <input type="text" class="form-control" placeholder="Name on Card"></input>
                     </div>
                     <div className="col-9 col-lg-3 col-xl-2">
-                        <label for="ExpDate">Exp Date</label>
-                        <input type="text" class="form-control" placeholder="Exp Date"></input>
+                        <label for="ExpDate">Exp Date (MM/YY)</label>
+                        <input type="text" class="form-control" placeholder="Exp Date (MM/YY)"></input>
                     </div>
                 </div>
 
