@@ -3,19 +3,20 @@ import React, {useState} from 'react';
 import Confirmation from './Confirmation';
 import { Validation } from './Validation';
 import ReactDom from "react-dom";
-import {useLocation} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 
-const Register = () => {
+const Register = (data) => {
     const [errors, setErrors] = useState({});
 
-    const location = useLocation();
-    console.log(location.title);
+    const navigate = useNavigate();
+    //console.log(location.title);
 
     function completeRegistration(event) {
         event.preventDefault()
         setErrors(Validation(values));
         if(errors.isValid === true){
+            navigate("/seg3125_project2_final/confirmation");
         }
     }; 
 
@@ -42,8 +43,8 @@ const Register = () => {
             <h1>Register for an Art Class</h1>
             <h2>1. Class information:</h2>
             <table id="details_table">
-                <tr><th>Class Name:</th><td>{location.title}</td></tr>
-                <tr><th>Instructor:</th><td>{location.instructor}</td></tr>
+                <tr><th>Class Name:</th><td>{data.title}</td></tr>
+                <tr><th>Instructor:</th><td>{data.instructor}</td></tr>
             </table>
 
             <h2>2. Please select the date and time for the class:</h2>
@@ -53,7 +54,7 @@ const Register = () => {
                         <div id="date_time_card" className="card">
                             <table id="date_time">
                                 <p>Date/Time Option 1:</p>
-                                <p>{location.dateTime1}</p>
+                                <p>{data.dateTime1}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="option1"  value="option1"></input>
                         </div>
@@ -62,7 +63,7 @@ const Register = () => {
                         <div id="date_time_card" className="card">
                         <table id="date_time">
                                 <p>Date/Time Option 2:</p>
-                                <p>{location.dateTime2}</p>
+                                <p>{data.dateTime2}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="vet2" value="Johnny Campbell"></input>
                         </div>
@@ -71,7 +72,7 @@ const Register = () => {
                         <div id="date_time_card" className="card">
                         <table id="date_time">
                                 <p>Date/Time Option 3:</p>
-                                <p>{location.dateTime3}</p>
+                                <p>{data.dateTime3}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="vet3"  value="Kathleen Cho"></input>
                         </div>

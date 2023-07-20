@@ -2,14 +2,14 @@ import {Link} from 'react-router-dom';
 import React,{useState} from 'react';
 import ClassCards from './ClassCards';
 
-const Classes = () => {
+const Classes = (setData) => {
 
 
     return (  
         <div className="classes">
             <h1>Select a Class</h1>
                 
-                    <ClassCards /> 
+                    <ClassCards setData={setData}/> 
                 
         </div>
 

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import { CCarousel } from '@coreui/react'
 import { CCarouselItem } from '@coreui/react'
 import Popup from './components/gallery_popup';
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
 
 
@@ -15,6 +15,30 @@ const Gallery = () => {
 
     const handleLangClick = (lang) => {
         i18n.changeLanguage(lang)
+    }
+
+    const [error, setError] = useState("");
+
+    function validateFeedback(){
+        if(values.userFeedback === ""){
+            setError("Feedback is required");
+        }
+        else{
+            setButtonPopup(false);
+            const empty = {userFeedback: ''}
+            setValues(empty)
+            setError("");
+        } 
+    }
+
+    const [values, setValues] = useState({
+        userFeedback: ''
+    });
+
+
+    function modifyInputField(event){
+        const obj = {...values, [event.target.name]: event.target.value}
+        setValues(obj)
     }
 
     return (  
@@ -72,11 +96,10 @@ const Gallery = () => {
                     </CCarouselItem>
             </CCarousel> 
 
-            <Popup trigger={buttonPopup} setTrigger={setButtonPopup} cancel={t('cancel')} send={t('send')}>
-                
-                    
+            <Popup validateFeedback={validateFeedback} trigger={buttonPopup} setTrigger={setButtonPopup} cancel={t('cancel')} send={t('send')}>
                         <h3>{t('sendFeedback')}</h3>
-                        <input type="text" class="form-control"  role="input field" placeholder={t('feedback')}></input>
+                        <input type="text" class="form-control" onChange={modifyInputField} name="userFeedback" value={values.userFeedback} role="input field" placeholder={t('feedback')}></input>
+                        {error && <p style={{color: "red"}}>{error}</p>}
             </Popup>
 
         </div>

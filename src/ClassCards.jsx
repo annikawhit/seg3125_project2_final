@@ -4,6 +4,7 @@ import sculpting from './images/sculpting.jpeg';
 import drawing from './images/drawing.jpeg';
 import { useNavigate } from 'react-router-dom';
 
+
 const mockProducts=[
 
     {
@@ -143,24 +144,13 @@ const mockProducts=[
 
 ]
 
-const Product = ({ product}) => {
+const Product = ({ product, key, setData}) => {
     const navigate = useNavigate();
-    const registerClass = () => {
-        /*const data=[
-            {
-                title:product.title,
-                instructor:product.instructor,
-                dateTime1:product.dateTime1,
-                dateTime2:product.dateTime2,
-                dateTime3:product.dateTime3
-            }
-        ];*/
-        /*setData(data).then(() => {
-            navigate('/seg3125_project2_final/register');
-        });*/
-        navigate('/seg3125_project2_final/register', {state: {title:product.title, instructor:product.instructor, dateTime1:product.dateTime1, dateTime2:product.dateTime2, dateTime3:product.dateTime3}})
-        
-    };
+
+    function registerClass(product){
+        setData(product);
+        navigate("/seg3125_project2_final/register");
+    }
 
     return(
             <div className="product-card col-md-4 mb-4">
@@ -179,7 +169,7 @@ const Product = ({ product}) => {
                             <tr><th></th><td>{product.dateTime2}</td></tr>
                             <tr><th></th><td>{product.dateTime3}</td></tr>
                         </table>
-                        <button onClick={registerClass} className="btn btn-secondary border-0">Register</button>
+                        <button onClick={registerClass({product})} className="btn btn-secondary border-0">Register</button>
                     </div>
                 </div>
             </div>
@@ -229,7 +219,7 @@ const Filter = ({ types, levels, lengths, sizes, handleTypeChange, handleLevelCh
     </div>
 );
 
-const ClassesList = () => {
+const ClassesList = (setData) => {
     const [typesFilters, setTypes] = useState([]);
     const [levelsFilters, setLevels] = useState([]);
     const [lengthsFilters, setLengths] = useState([]);
@@ -303,7 +293,7 @@ const ClassesList = () => {
                 <div className="products col-md-9">
                     <div className="row">   
                         {filteredProducts.map(product => (
-                            <Product product={product} key={product.id}/>
+                            <Product product={product} key={product.id} setData={setData}/>
                         ))}
                     </div>
                 </div>
@@ -312,9 +302,9 @@ const ClassesList = () => {
     );
 };
 
-const ClassCards = () => (
+const ClassCards = (setData) => (
     <div>
-        <ClassesList />
+        <ClassesList setData={setData}/>
     </div>
 );
 
