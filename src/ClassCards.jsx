@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import {Link} from 'react-router-dom';
 import painting from './images/painting.jpeg';
 import sculpting from './images/sculpting.jpeg';
 import drawing from './images/drawing.jpeg';
@@ -162,7 +162,7 @@ const Product = ({ product}) => {
                             <tr><th></th><td>{product.dateTime2}</td></tr>
                             <tr><th></th><td>{product.dateTime3}</td></tr>
                         </table>
-                        
+                        <Link className="btn btn-dark" id="register_btn" to="/seg3125_project2_final/register">Register</Link>
                     </div>
                 </div>
             </div>
