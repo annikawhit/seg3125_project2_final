@@ -9,7 +9,7 @@ const Register = () => {
     function completeRegistration(event) {
         event.preventDefault()
         setErrors(Validation(values));
-        if(errors.isValid == true){
+        if(errors.isValid === true){
         }
     }; 
 

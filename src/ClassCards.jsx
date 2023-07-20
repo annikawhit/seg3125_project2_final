@@ -1,13 +1,15 @@
-import {Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
-import image from './images/painting.jpeg';
+
+import painting from './images/painting.jpeg';
+import sculpting from './images/sculpting.jpeg';
+import drawing from './images/drawing.jpeg';
 
 const mockProducts=[
 
     {
         id:1,
         title:"Introduction to Painting",
-        image: './images/painting.jpeg',
+        image: painting,
         type:"Painting",
         level:"Beginner",
         rating:"5 stars",
@@ -22,7 +24,7 @@ const mockProducts=[
     {
         id:2,
         title:"Introduction to Sculpture",
-        image:'./images/sculpting.jpeg',
+        image:sculpting,
         type:"Sculpting",
         level:"Beginner",
         rating:"4 stars",
@@ -37,7 +39,7 @@ const mockProducts=[
     {
         id:3,
         title:"Introduction to Drawing",
-        image:'./images/drawing.jpeg',
+        image:drawing,
         type:"Drawing",
         level:"Beginner",
         rating:"4.5 stars",
@@ -52,7 +54,7 @@ const mockProducts=[
     {
         id:4,
         title:"Explore Drawing",
-        image:'./images/drawing.jpeg',
+        image:drawing,
         type:"Drawing",
         level:"Intermediate",
         rating:"4 stars",
@@ -67,7 +69,7 @@ const mockProducts=[
     {
         id: 5,
         title:"Explore Painting",
-        image:'./images/painting.jpeg',
+        image:painting,
         type:"Painting",
         level:"Intermediate",
         rating:"3.5 stars",
@@ -82,7 +84,7 @@ const mockProducts=[
     {
         id:6,
         title:"Explore Sculpting",
-        image:'./images/sculpting.jpeg',
+        image:sculpting,
         type:"Sculpting",
         level:"Intermediate",
         rating:"5 stars",
@@ -97,7 +99,7 @@ const mockProducts=[
     {
         id:7,
         title:"Advanced Sculpting",
-        image:'./images/sculpting.jpeg',
+        image:sculpting,
         type:"Sculpting",
         level:"Advanced",
         rating:"4.5 stars",
@@ -112,7 +114,7 @@ const mockProducts=[
     {
         id: 8,
         title:"Advanced Drawing",
-        image:'./images/drawing.jpeg',
+        image:drawing,
         type:"Drawing",
         level:"Advanced",
         rating:"5 stars",
@@ -127,7 +129,7 @@ const mockProducts=[
     {
         id:9,
         title:"Advanced Painting",
-        image:'./images/painting.jpeg',
+        image:painting,
         type:"Painting",
         level:"Advanced",
         rating:"4 stars",
@@ -146,7 +148,7 @@ const Product = ({ product}) => {
     return(
             <div className="product-card col-md-4 mb-4">
                 <div className="card">
-                    <img src={image} alt={product.title}></img>    
+                    <img src={product.image} alt={product.title}></img>    
                     <div className="card-body">
                         <h5 className="card-title">{product.title}</h5>
                         <table id="class_details">
@@ -160,7 +162,7 @@ const Product = ({ product}) => {
                             <tr><th></th><td>{product.dateTime2}</td></tr>
                             <tr><th></th><td>{product.dateTime3}</td></tr>
                         </table>
-                        <Link className="btn btn-dark" id="register_btn" to="/seg3125_project2_final/register">Register</Link>
+                        
                     </div>
                 </div>
             </div>
@@ -221,47 +223,50 @@ const ClassesList = () => {
     const uniqueLengths = Array.from(new Set(mockProducts.map(product => product.classLength)));
     const uniqueSizes = Array.from(new Set(mockProducts.map(product => product.size)));
 
+    let filteredProducts = mockProducts.filter(product => {
+        const typeMatch = typesFilters.length === 0 || typesFilters.includes(product.type);
+        const levelMatch = levelsFilters.length === 0 || levelsFilters.includes(product.level);
+        const lengthMatch = lengthsFilters.length === 0 || lengthsFilters.includes(product.classLength);
+        const sizeMatch = sizesFilters.length === 0 || sizesFilters.includes(product.size);
+
+        return typeMatch && levelMatch && lengthMatch && sizeMatch;
+    });
+
     const handleTypeChange = (type) => {
-        
-        if (typesFilters.includes(type)) {
-            setTypes(typesFilters.filter(tp => tp !== type));
+        const { type: selectedType } = type; 
+        if (typesFilters.includes(selectedType)) {
+            setTypes(typesFilters.filter(tp => tp !== selectedType));
         } else {
-            setTypes([...typesFilters, type]);
+            setTypes([...typesFilters, selectedType]);
         }
     };
-
-    const handleLevelChange = (level) => {
-        if (levelsFilters.includes(level)) {
-        setLevels(levelsFilters.filter(lvl => lvl !== level));
-        } else {
-        setLevels([...levelsFilters, level]);
-        }
-    };
-
-    const handleLengthChange = (classLength) => {
-        if (lengthsFilters.includes(classLength)) {
-        setLengths(lengthsFilters.filter(lgt => lgt !== classLength));
-        } else {
-        setLengths([...lengthsFilters, classLength]);
-        }
-    };
-
-    const handleSizeChange = (size) => {
-        if (sizesFilters.includes(size)) {
-        setSizes(sizesFilters.filter(sz => sz !== size));
-        } else {
-        setSizes([...sizesFilters, size]);
-        }
-    };
-
-    console.log(typesFilters.length);
     
-    let filteredProducts =  typesFilters.length ? mockProducts.filter(product => typesFilters.includes(product.type)) : mockProducts;
-    //filteredProducts = levelsFilters.length ? filteredProducts.filter(product => levelsFilters.includes(product.level)) : filteredProducts;
-    //filteredProducts = lengthsFilters.length ? filteredProducts.filter(product => lengthsFilters.includes(product.classLength)) : filteredProducts;
-    //filteredProducts = sizesFilters.length ? filteredProducts.filter(product => sizesFilters.includes(product.size)) : filteredProducts;
-    console.log(mockProducts);
-    console.log(filteredProducts);
+    const handleLevelChange = (level) => {
+        const { level: selectedLevel } = level; 
+        if (levelsFilters.includes(selectedLevel)) {
+            setLevels(levelsFilters.filter(lvl => lvl !== selectedLevel));
+        } else {
+            setLevels([...levelsFilters, selectedLevel]);
+        }
+    };
+    
+    const handleLengthChange = (classLength) => {
+            const { classLength: selectedLength } = classLength; 
+        if (lengthsFilters.includes(selectedLength)) {
+            setLengths(lengthsFilters.filter(lgt => lgt !== selectedLength));
+        } else {
+            setLengths([...lengthsFilters, selectedLength]);
+        }
+    };
+    
+    const handleSizeChange = (size) => {
+        const { size: selectedSize } = size; 
+        if (sizesFilters.includes(selectedSize)) {
+            setSizes(sizesFilters.filter(sz => sz !== selectedSize));
+        } else {
+            setSizes([...sizesFilters, selectedSize]);
+        }
+    };
             
 
     return (

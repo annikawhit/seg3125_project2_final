@@ -110,9 +110,8 @@
   margin-right: auto;
 }
 
-.card-img-top {
-  height: 15vw;
-  object-fit: contain;
+.card img{
+  min-height:17vw;
 }
 
 .card {
