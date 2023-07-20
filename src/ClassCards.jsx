@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
 import painting from './images/painting.jpeg';
 import sculpting from './images/sculpting.jpeg';
 import drawing from './images/drawing.jpeg';
+import { useNavigate } from 'react-router-dom';
 
 const mockProducts=[
 
@@ -144,6 +144,23 @@ const mockProducts=[
 ]
 
 const Product = ({ product}) => {
+    const navigate = useNavigate();
+    const registerClass = () => {
+        /*const data=[
+            {
+                title:product.title,
+                instructor:product.instructor,
+                dateTime1:product.dateTime1,
+                dateTime2:product.dateTime2,
+                dateTime3:product.dateTime3
+            }
+        ];*/
+        /*setData(data).then(() => {
+            navigate('/seg3125_project2_final/register');
+        });*/
+        navigate('/seg3125_project2_final/register', {state: {title:product.title, instructor:product.instructor, dateTime1:product.dateTime1, dateTime2:product.dateTime2, dateTime3:product.dateTime3}})
+        
+    };
 
     return(
             <div className="product-card col-md-4 mb-4">
@@ -162,7 +179,7 @@ const Product = ({ product}) => {
                             <tr><th></th><td>{product.dateTime2}</td></tr>
                             <tr><th></th><td>{product.dateTime3}</td></tr>
                         </table>
-                        <Link className="btn btn-dark" id="register_btn" to="/seg3125_project2_final/register">Register</Link>
+                        <button onClick={registerClass} className="btn btn-secondary border-0">Register</button>
                     </div>
                 </div>
             </div>
@@ -286,7 +303,7 @@ const ClassesList = () => {
                 <div className="products col-md-9">
                     <div className="row">   
                         {filteredProducts.map(product => (
-                            <Product product={product} key={product.id} />
+                            <Product product={product} key={product.id}/>
                         ))}
                     </div>
                 </div>

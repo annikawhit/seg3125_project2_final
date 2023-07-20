@@ -1,13 +1,26 @@
+import React from 'react';
+import GoogleMapReact from 'google-map-react';
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const ContactUs = () => {
+
+    const defaultProps = {
+        center: {
+        lat: 45.4231,
+        lng: -75.6831
+        },
+        zoom: 11
+    };
+
     return (  
         <div className="contactus">
             <h1>Contact Us</h1>
 
-            <div className="rowContactUs" id="contact">
+            <div className="row align-items-start justify-content-center my-2" id="contact">
                             
-                <div id="contactus_table1">
+                <div className="col-9 col-lg-5 col-xl-4" id="contactus_table1">
                     <h4>Hours of Operation</h4>
-                    <table>
+                    <table id="contact_table">
                         <tr><th>Monday</th><td>10am - 7pm</td></tr>
                         <tr><th>Tuesday</th><td>10am - 7pm</td></tr>
                         <tr><th>Wednesday</th><td>10am - 7pm</td></tr>
@@ -18,12 +31,12 @@ const ContactUs = () => {
                     </table>
                 </div>
                 
-                <div id="contactus_table2">
+                <div className="col-9 col-lg-5 col-xl-4" id="contactus_table2">
                     <h4>Address</h4>
                     <table id="address">
-                        <tr><td>75 Laurier Ave E</td></tr>
+                        <tr><td>1000 Airport Parkway Private</td></tr>
                         <tr><td>Ottawa, Ontario</td></tr>
-                        <tr><td>K1N 6N5</td></tr>
+                        <tr><td>K1V 9B4</td></tr>
                     </table>
 
                     <table id="email_phone">
@@ -31,6 +44,20 @@ const ContactUs = () => {
                         <tr><th>Phone:</th><td>613-456-7890</td></tr>
                     </table>
                 </div>
+            </div>
+
+            <div style={{ height: '100vh', width: '70%', marginLeft:'auto', marginRight:'auto'}}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: "" }}
+                    defaultCenter={defaultProps.center}
+                    defaultZoom={defaultProps.zoom}
+                    >
+                        <AnyReactComponent
+                        lat={45.3556599}
+                        lng={-75.6226982}
+                        text="Imagine Art Studio"
+                        />
+                </GoogleMapReact>
             </div>
 
 

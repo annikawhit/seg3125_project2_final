@@ -1,0 +1,16 @@
+{
+    "gallery": "Galerie",
+    "studentName1": "Nom de l'élève : Josephine",
+    "className1": "Nom du cours : Introduction à la peinture",
+    "description1": "Description : J'ai pu créer cette peinture à l'aquarelle d'un oiseau pendant ma première série de leçons à Imagine Art Studio. Merci à mes instructeurs pour leur aide.",
+    "studentName2": "Nom de l'étudiant : Helen",
+    "className2": "Nom du cours : Sculpture avancée",
+    "description2": "Description : La semaine dernière, j'ai suivi mon premier cours avancé à Imagine Art Studio. Pendant le cours, l'instructeur m'a aidé à créer cette magnifique pièce de poterie.",
+    "studentName3": "Nom de l'élève : Leo",
+    "className3": "Nom du cours : Explorer le dessin",
+    "description3": "Description : Jusqu'à présent, j'ai suivi plusieurs cours de dessin dans ce studio d'art et j'ai déjà pu constater une nette amélioration de ma technique de dessin.",
+    "sendFeedback": "Envoyer un commentaire",
+    "feedback": "Ajoutez vos commentaires ici",
+    "send": "Envoyer",
+    "cancel": "Annuler"
+}

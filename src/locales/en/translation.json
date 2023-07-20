@@ -1,0 +1,16 @@
+{
+    "gallery": "Gallery",
+    "studentName1": "Student Name: Josephine",
+    "className1": "Class Name: Introduction to Painting",
+    "description1": "Description: I was able to create this watercolour painting of a bird during my first set of lessons at Imagine Art Studio. Thank you to my instructors for all their help.",
+    "studentName2": "Student Name: Helen",
+    "className2": "Class Name: Advanced Sculpting",
+    "description2": "Description: Last week, I took my first advanced class at Imagine Art Studio. During the class, the instructor helped me create this beautiful piece of pottery.",
+    "studentName3": "Student Name: Leo",
+    "className3": "Class Name: Explore Drawing",
+    "description3": "Description: So far I have taken a few different drawing classes at this art studio and I can already see much improvement in my drawing technique.",
+    "sendFeedback": "Send Feedback",
+    "feedback": "Add your feedback here",
+    "send": "Send",
+    "cancel": "Cancel"
+}

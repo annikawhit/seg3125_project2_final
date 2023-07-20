@@ -9,9 +9,12 @@ import Confirmation from './Confirmation';
 import Footer from './Footer';
 import NotFoundPage from './NotFoundPage';
 import { Route, Routes } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 
 
 function App() {
+
+  const [data, setData] = useState({});
 
   return (
     
