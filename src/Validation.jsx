@@ -88,7 +88,6 @@ export function Validation(values){
         errors.cvv = ("Invalid CVV. Please enter a valid CVV code (999).");
         errors.isValid = false;
     }
-
     return errors;
 
 }

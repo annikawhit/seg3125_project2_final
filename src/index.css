@@ -236,6 +236,10 @@
   padding-top: 3%;
 }
 
+#address td{
+  text-align: center;
+}
+
 
 /*register*/
 
@@ -304,6 +308,10 @@
 
 th{
   text-align: right;
+}
+
+td{
+  text-align: left;
 }
 
 

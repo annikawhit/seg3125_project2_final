@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import React, {useState} from 'react';
+import React, {useState, useSetState, useEffect} from 'react';
 import Confirmation from './Confirmation';
 import { Validation } from './Validation';
 import ReactDom from "react-dom";
@@ -10,15 +10,16 @@ const Register = (props) => {
     const [errors, setErrors] = useState({});
 
     const navigate = useNavigate();
-    //console.log(location.title);
 
-    function completeRegistration(event) {
-        event.preventDefault()
+    const completeRegistration = () => {
+        //event.preventDefault()
         setErrors(Validation(values));
-        if(errors.isValid === true){
+        if(Validation(values).isValid === true){
+            console.log("inside")
             navigate("/seg3125_project2_final/confirmation");
         }
-    }; 
+    };
+
 
     const [values, setValues] = useState({
         firstName: '',
@@ -28,8 +29,7 @@ const Register = (props) => {
         ccNumber: '',
         exp: '',
         cvv: '',
-        ccName: '',
-        isValid: true
+        ccName: ''
     });
 
 
@@ -138,7 +138,7 @@ const Register = (props) => {
                 </div>
             </form>
 
-            <Link class="btn btn-dark" onClick={completeRegistration} id="register_btn">Register</Link>
+            <button class="btn btn-dark" onClick={() => completeRegistration()}>Register</button>
         </div>
     );
 }
