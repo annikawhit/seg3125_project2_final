@@ -15,7 +15,13 @@ import { useNavigate } from 'react-router-dom';
 
 function App() {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({
+    title: '',
+    instructor: '',
+    dateTime1:'',
+    dateTime2:'',
+    dateTime3:''
+  });
   
 
   return (
@@ -27,11 +33,11 @@ function App() {
         <div className="content">
           <Routes >
               <Route exact path="/seg3125_project2_final" element={<Home />}> </Route>
-              <Route exact path="/seg3125_project2_final/classes" element={<Classes setData={setData}/>}></Route>
+              <Route exact path="/seg3125_project2_final/classes" element={<Classes data={data} setData={setData}/>}></Route>
               <Route exact path="/seg3125_project2_final/gallery" element={<Gallery />}></Route>
               <Route exact path="/seg3125_project2_final/contactus" element={<ContactUs />}></Route>
               <Route exact path="/seg3125_project2_final/register" element={<Register  data={data}/>}></Route>
-              <Route exact path="/seg3125_project2_final/confirmation" element={<Confirmation />}></Route>
+              <Route exact path="/seg3125_project2_final/confirmation" element={<Confirmation data={data}/>}></Route>
               <Route path="*" element={<NotFoundPage />}></Route>
           </Routes>
         </div>

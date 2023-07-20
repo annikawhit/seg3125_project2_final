@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-const Confirmation = ({registrationData}) => {
+const Confirmation = (props) => {
 
     const bookingID = Math.floor(Math.random() * (99999 - 10000) + 10000);
 
@@ -15,9 +15,9 @@ const Confirmation = ({registrationData}) => {
             <div class="my-5">
                 <table id="booking_table">
                     <tr><th>Booking #:</th><td>{bookingID}</td></tr>
-                    <tr><th>Class:</th><td>test</td></tr>
-                    <tr><th>Instructor:</th><td>test</td></tr>
-                    <tr><th>Date/Time:</th><td>test</td></tr>
+                    <tr><th>Class:</th><td>{props.data.title}</td></tr>
+                    <tr><th>Instructor:</th><td>{props.data.instructor}</td></tr>
+                    <tr><th>Date/Time:</th><td>{props.data.dateTime1}</td></tr>
                 </table>
             </div>  
 

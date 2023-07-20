@@ -6,7 +6,7 @@ import ReactDom from "react-dom";
 import {useNavigate} from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 
-const Register = (data) => {
+const Register = (props) => {
     const [errors, setErrors] = useState({});
 
     const navigate = useNavigate();
@@ -43,8 +43,8 @@ const Register = (data) => {
             <h1>Register for an Art Class</h1>
             <h2>1. Class information:</h2>
             <table id="details_table">
-                <tr><th>Class Name:</th><td>{data.title}</td></tr>
-                <tr><th>Instructor:</th><td>{data.instructor}</td></tr>
+                <tr><th>Class Name:</th><td>{props.data.title}</td></tr>
+                <tr><th>Instructor:</th><td>{props.data.instructor}</td></tr>
             </table>
 
             <h2>2. Please select the date and time for the class:</h2>
@@ -54,7 +54,7 @@ const Register = (data) => {
                         <div id="date_time_card" className="card">
                             <table id="date_time">
                                 <p>Date/Time Option 1:</p>
-                                <p>{data.dateTime1}</p>
+                                <p>{props.data.dateTime1}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="option1"  value="option1"></input>
                         </div>
@@ -63,7 +63,7 @@ const Register = (data) => {
                         <div id="date_time_card" className="card">
                         <table id="date_time">
                                 <p>Date/Time Option 2:</p>
-                                <p>{data.dateTime2}</p>
+                                <p>{props.data.dateTime2}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="vet2" value="Johnny Campbell"></input>
                         </div>
@@ -72,7 +72,7 @@ const Register = (data) => {
                         <div id="date_time_card" className="card">
                         <table id="date_time">
                                 <p>Date/Time Option 3:</p>
-                                <p>{data.dateTime3}</p>
+                                <p>{props.data.dateTime3}</p>
                             </table>
                             <input className="form-check-input mt-4" type="radio" name="flexRadioDefault" id="vet3"  value="Kathleen Cho"></input>
                         </div>

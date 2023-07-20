@@ -2,14 +2,14 @@ import {Link} from 'react-router-dom';
 import React,{useState} from 'react';
 import ClassCards from './ClassCards';
 
-const Classes = (setData) => {
+const Classes = ( props) => {
 
 
     return (  
         <div className="classes">
             <h1>Select a Class</h1>
                 
-                    <ClassCards setData={setData}/> 
+                    <ClassCards data={props.data} setData={props.setData}/> 
                 
         </div>
 

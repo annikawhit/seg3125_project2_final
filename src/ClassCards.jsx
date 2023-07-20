@@ -144,32 +144,33 @@ const mockProducts=[
 
 ]
 
-const Product = ({ product, key, setData}) => {
+const Product = (props) => {
     const navigate = useNavigate();
 
-    function registerClass(product){
-        setData(product);
+    function registerClass(classes){
+        const obj = {...props.data, ['title']: classes.title, ['instructor']: classes.instructor, ['dateTime1']: classes.dateTime1, ['dateTime2']: classes.dateTime2, ['dateTime3']: classes.dateTime3}
+        props.setData(obj);
         navigate("/seg3125_project2_final/register");
     }
 
     return(
             <div className="product-card col-md-4 mb-4">
                 <div className="card">
-                    <img src={product.image} alt={product.title}></img>    
+                    <img src={props.product.image} alt={props.product.title}></img>    
                     <div className="card-body">
-                        <h5 className="card-title">{product.title}</h5>
+                        <h5 className="card-title">{props.product.title}</h5>
                         <table id="class_details">
-                            <tr><th>Type:</th><td>{product.type}</td></tr>
-                            <tr><th>Level:</th><td>{product.level}</td></tr>
-                            <tr><th>Rating:</th><td>{product.rating}</td></tr>
-                            <tr><th>Instructor:</th><td>{product.instructor}</td></tr>
-                            <tr><th>Course Length:</th><td>{product.classLength}</td></tr>
-                            <tr><th>Class Size:</th><td>{product.size}</td></tr>
-                            <tr><th>Dates/Times:</th><td>{product.dateTime1}</td></tr>
-                            <tr><th></th><td>{product.dateTime2}</td></tr>
-                            <tr><th></th><td>{product.dateTime3}</td></tr>
+                            <tr><th>Type:</th><td>{props.product.type}</td></tr>
+                            <tr><th>Level:</th><td>{props.product.level}</td></tr>
+                            <tr><th>Rating:</th><td>{props.product.rating}</td></tr>
+                            <tr><th>Instructor:</th><td>{props.product.instructor}</td></tr>
+                            <tr><th>Course Length:</th><td>{props.product.classLength}</td></tr>
+                            <tr><th>Class Size:</th><td>{props.product.size}</td></tr>
+                            <tr><th>Dates/Times:</th><td>{props.product.dateTime1}</td></tr>
+                            <tr><th></th><td>{props.product.dateTime2}</td></tr>
+                            <tr><th></th><td>{props.product.dateTime3}</td></tr>
                         </table>
-                        <button onClick={registerClass({product})} className="btn btn-secondary border-0">Register</button>
+                        <button onClick={() => registerClass(props.product)} className="btn btn-secondary border-0">Register</button>
                     </div>
                 </div>
             </div>
@@ -219,7 +220,7 @@ const Filter = ({ types, levels, lengths, sizes, handleTypeChange, handleLevelCh
     </div>
 );
 
-const ClassesList = (setData) => {
+const ClassesList = (props) => {
     const [typesFilters, setTypes] = useState([]);
     const [levelsFilters, setLevels] = useState([]);
     const [lengthsFilters, setLengths] = useState([]);
@@ -293,7 +294,7 @@ const ClassesList = (setData) => {
                 <div className="products col-md-9">
                     <div className="row">   
                         {filteredProducts.map(product => (
-                            <Product product={product} key={product.id} setData={setData}/>
+                            <Product product={product} key={product.id} data={props.data} setData={props.setData}/>
                         ))}
                     </div>
                 </div>
@@ -302,9 +303,9 @@ const ClassesList = (setData) => {
     );
 };
 
-const ClassCards = (setData) => (
+const ClassCards = (props) => (
     <div>
-        <ClassesList setData={setData}/>
+        <ClassesList data={props.data} setData={props.setData}/>
     </div>
 );
 
