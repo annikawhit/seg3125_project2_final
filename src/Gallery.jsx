@@ -20,7 +20,7 @@ const Gallery = () => {
                     <CCarouselItem>
                         <div className="rowGallery" id="gallery">
                                 <div id="image">
-                                    <img class="d-block w-100" src={image1} alt="First slide"></img>
+                                    <img class="d-block w-200" src={image1} alt="First slide"></img>
                                 </div>
                                 
                                 <div>
