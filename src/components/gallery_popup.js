@@ -10,7 +10,7 @@ function gallery_popup(props) {
             <div className='popup_inner'>
                 {props.children}
 
-                <button id="popup_btn_cancel" onClick={() => props.setTrigger(false)} class="btn btn-secondary border-0">{props.cancel}</button>
+                <button id="popup_btn_cancel" onClick={() => props.clearError()} class="btn btn-secondary border-0">{props.cancel}</button>
                 <button id="popup_btn_send" onClick={() => props.validateFeedback()} class="btn btn-secondary border-0">{props.send}</button>
             </div>
         </div>

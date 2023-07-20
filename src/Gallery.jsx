@@ -31,6 +31,11 @@ const Gallery = () => {
         } 
     }
 
+    function clearError(){
+        setButtonPopup(false)
+        setError("");
+    }
+
     const [values, setValues] = useState({
         userFeedback: ''
     });
@@ -96,7 +101,7 @@ const Gallery = () => {
                     </CCarouselItem>
             </CCarousel> 
 
-            <Popup validateFeedback={validateFeedback} trigger={buttonPopup} setTrigger={setButtonPopup} cancel={t('cancel')} send={t('send')}>
+            <Popup clearError={clearError} validateFeedback={validateFeedback} trigger={buttonPopup} setTrigger={setButtonPopup} cancel={t('cancel')} send={t('send')}>
                         <h3>{t('sendFeedback')}</h3>
                         <input type="text" class="form-control" onChange={modifyInputField} name="userFeedback" value={values.userFeedback} role="input field" placeholder={t('feedback')}></input>
                         {error && <p style={{color: "red"}}>{error}</p>}
