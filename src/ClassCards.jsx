@@ -17,9 +17,9 @@ const mockProducts=[
         instructor:"Evelyn",
         classLength:"1 day",
         size:"Small (5 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 4th @ 2pm",
+        dateTime2:"Aug 9th @ 1pm",
+        dateTime3:"Aug 18th @ 3pm"
     },
 
     {
@@ -32,9 +32,9 @@ const mockProducts=[
         instructor:"Suzan",
         classLength:"2 days",
         size:"Medium (10 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 16th @ 12pm",
+        dateTime2:"Aug 18th @ 1pm",
+        dateTime3:"Aug 24th @ 10am"
     },
 
     {
@@ -47,9 +47,9 @@ const mockProducts=[
         instructor:"Felix",
         classLength:"1 day",
         size:"Medium (10 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 12th @ 2pm",
+        dateTime2:"Aug 17th @ 1pm",
+        dateTime3:"Aug 19th @ 2pm"
     },
 
     {
@@ -62,9 +62,9 @@ const mockProducts=[
         instructor:"Suzan",
         classLength:"2 days",
         size:"Medium (10 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 20th @ 1pm",
+        dateTime2:"Aug 24th @ 4pm",
+        dateTime3:"Aug 28th @ 2pm"
     }, 
 
     {
@@ -77,9 +77,9 @@ const mockProducts=[
         instructor:"Felix",
         classLength:"2 days",
         size:"Large (20 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 13th @ 12pm",
+        dateTime2:"Aug 18th @ 1pm",
+        dateTime3:"Aug 22th @ 2pm"
     },
 
     {
@@ -92,9 +92,9 @@ const mockProducts=[
         instructor:"Evelyn",
         classLength:"5 days",
         size:"Small (5 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 7th @ 6pm",
+        dateTime2:"Aug 12th @ 12pm",
+        dateTime3:"Aug 20th @ 3pm"
     },
 
     {
@@ -107,9 +107,9 @@ const mockProducts=[
         instructor:"Felix",
         classLength:"5 days",
         size:"Medium (10 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 5th @ 5pm",
+        dateTime2:"Aug 20th @ 11am",
+        dateTime3:"Aug 27th @ 11am"
     }, 
 
     {
@@ -122,9 +122,9 @@ const mockProducts=[
         instructor:"Evelyn",
         classLength:"2 days",
         size:"Large (20 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 1th @ 3pm",
+        dateTime2:"Aug 4th @ 4pm",
+        dateTime3:"Aug 9th @ 10am"
     },
 
     {
@@ -137,9 +137,9 @@ const mockProducts=[
         instructor:"Suzan",
         classLength:"5 days",
         size:"Small (5 students)",
-        dateTime1:"August 4th @ 6pm",
-        dateTime2:"August 7th @ 12pm",
-        dateTime3:"August 8th @ 3pm"
+        dateTime1:"Aug 4th @ 10am",
+        dateTime2:"Aug 13th @ 1pm",
+        dateTime3:"Aug 18th @ 4pm"
     },
 
 ]
