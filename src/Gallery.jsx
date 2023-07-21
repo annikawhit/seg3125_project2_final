@@ -34,6 +34,8 @@ const Gallery = () => {
     function clearError(){
         setButtonPopup(false)
         setError("");
+        const clr = {...values, ['userFeedback']: ""};
+        setValues(clr);
     }
 
     const [values, setValues] = useState({
