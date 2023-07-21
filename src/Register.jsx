@@ -1,10 +1,6 @@
-import {Link} from 'react-router-dom';
-import React, {useState, useSetState, useEffect} from 'react';
-import Confirmation from './Confirmation';
+import React, {useState} from 'react';
 import { Validation } from './Validation';
-import ReactDom from "react-dom";
 import {useNavigate} from 'react-router-dom';
-import { Tooltip } from 'react-tooltip';
 
 const Register = (props) => {
     const [errors, setErrors] = useState({});

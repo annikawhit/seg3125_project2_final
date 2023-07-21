@@ -1,7 +1,6 @@
 import image1 from './images/gallery1.jpeg'
 import image2 from './images/gallery2.jpeg'
 import image3 from './images/gallery3.jpeg'
-import {Link} from 'react-router-dom';
 import { CCarousel } from '@coreui/react'
 import { CCarouselItem } from '@coreui/react'
 import Popup from './components/gallery_popup';

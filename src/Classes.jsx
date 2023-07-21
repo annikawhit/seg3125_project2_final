@@ -1,5 +1,4 @@
-import {Link} from 'react-router-dom';
-import React,{useState} from 'react';
+import React from 'react';
 import ClassCards from './ClassCards';
 
 const Classes = ( props) => {
