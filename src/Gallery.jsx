@@ -49,8 +49,8 @@ const Gallery = () => {
     return (  
         <div className="gallery">
             <div className="row" id="langRow">
-                <button onClick={()=>handleLangClick('en')} className="btn border-0" id="language">EN</button>
-                <button onClick={()=>handleLangClick('fr')} className="btn border-0" id="language">FR</button>
+                <button onClick={()=>handleLangClick('en')} alt="Switch language to english" role="button" className="btn border-0" id="language">EN</button>
+                <button onClick={()=>handleLangClick('fr')} alt="Switch language to french" role="button" className="btn border-0" id="language">FR</button>
             </div>
             
             <h1>{t('gallery')}</h1>

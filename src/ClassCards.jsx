@@ -5,7 +5,7 @@ import drawing from './images/drawing.jpeg';
 import { useNavigate } from 'react-router-dom';
 
 
-const mockProducts=[
+const classes=[
 
     {
         id:1,
@@ -144,7 +144,7 @@ const mockProducts=[
 
 ]
 
-const Product = (props) => {
+const AClass = (props) => {
     const navigate = useNavigate();
 
     function registerClass(classes){
@@ -156,21 +156,21 @@ const Product = (props) => {
     return(
             <div className="product-card col-md-4 mb-4">
                 <div className="card">
-                    <img src={props.product.image} alt={props.product.title}></img>    
+                    <img src={props.aClass.image} alt={props.aClass.title}></img>    
                     <div className="card-body">
-                        <h5 className="card-title">{props.product.title}</h5>
+                        <h5 className="card-title">{props.aClass.title}</h5>
                         <table id="class_details">
-                            <tr><th>Type:</th><td>{props.product.type}</td></tr>
-                            <tr><th>Level:</th><td>{props.product.level}</td></tr>
-                            <tr><th>Rating:</th><td>{props.product.rating}</td></tr>
-                            <tr><th>Instructor:</th><td>{props.product.instructor}</td></tr>
-                            <tr><th>Course Length:</th><td>{props.product.classLength}</td></tr>
-                            <tr><th>Class Size:</th><td>{props.product.size}</td></tr>
-                            <tr><th>Dates/Times:</th><td>{props.product.dateTime1}</td></tr>
-                            <tr><th></th><td>{props.product.dateTime2}</td></tr>
-                            <tr><th></th><td>{props.product.dateTime3}</td></tr>
+                            <tr><th>Type:</th><td>{props.aClass.type}</td></tr>
+                            <tr><th>Level:</th><td>{props.aClass.level}</td></tr>
+                            <tr><th>Rating:</th><td>{props.aClass.rating}</td></tr>
+                            <tr><th>Instructor:</th><td>{props.aClass.instructor}</td></tr>
+                            <tr><th>Course Length:</th><td>{props.aClass.classLength}</td></tr>
+                            <tr><th>Class Size:</th><td>{props.aClass.size}</td></tr>
+                            <tr><th>Dates/Times:</th><td>{props.aClass.dateTime1}</td></tr>
+                            <tr><th></th><td>{props.aClass.dateTime2}</td></tr>
+                            <tr><th></th><td>{props.aClass.dateTime3}</td></tr>
                         </table>
-                        <button onClick={() => registerClass(props.product)} className="btn btn-secondary border-0">Register</button>
+                        <button onClick={() => registerClass(props.aClass)} className="btn btn-secondary border-0">Register</button>
                     </div>
                 </div>
             </div>
@@ -226,16 +226,16 @@ const ClassesList = (props) => {
     const [lengthsFilters, setLengths] = useState([]);
     const [sizesFilters, setSizes] = useState([]);
 
-    const uniqueTypes = Array.from(new Set(mockProducts.map(product => product.type)));
-    const uniqueLevels = Array.from(new Set(mockProducts.map(product => product.level)));
-    const uniqueLengths = Array.from(new Set(mockProducts.map(product => product.classLength)));
-    const uniqueSizes = Array.from(new Set(mockProducts.map(product => product.size)));
+    const uniqueTypes = Array.from(new Set(classes.map(aClass => aClass.type)));
+    const uniqueLevels = Array.from(new Set(classes.map(aClass => aClass.level)));
+    const uniqueLengths = Array.from(new Set(classes.map(aClass => aClass.classLength)));
+    const uniqueSizes = Array.from(new Set(classes.map(aClass => aClass.size)));
 
-    let filteredProducts = mockProducts.filter(product => {
-        const typeMatch = typesFilters.length === 0 || typesFilters.includes(product.type);
-        const levelMatch = levelsFilters.length === 0 || levelsFilters.includes(product.level);
-        const lengthMatch = lengthsFilters.length === 0 || lengthsFilters.includes(product.classLength);
-        const sizeMatch = sizesFilters.length === 0 || sizesFilters.includes(product.size);
+    let filteredProducts = classes.filter(aClass => {
+        const typeMatch = typesFilters.length === 0 || typesFilters.includes(aClass.type);
+        const levelMatch = levelsFilters.length === 0 || levelsFilters.includes(aClass.level);
+        const lengthMatch = lengthsFilters.length === 0 || lengthsFilters.includes(aClass.classLength);
+        const sizeMatch = sizesFilters.length === 0 || sizesFilters.includes(aClass.size);
 
         return typeMatch && levelMatch && lengthMatch && sizeMatch;
     });
@@ -293,8 +293,8 @@ const ClassesList = (props) => {
 
                 <div className="products col-md-9">
                     <div className="row">   
-                        {filteredProducts.map(product => (
-                            <Product product={product} key={product.id} data={props.data} setData={props.setData}/>
+                        {filteredProducts.map(aClass => (
+                            <AClass aClass={aClass} key={aClass.id} data={props.data} setData={props.setData}/>
                         ))}
                     </div>
                 </div>
