@@ -58,8 +58,9 @@ const Gallery = () => {
             <CCarousel controls>
                     <CCarouselItem>
                         <div className="rowGallery" id="gallery">
+                            
                                 <div id="image">
-                                    <img class="d-block w-200" src={image1} alt="Watercolour painting of a bird"></img>
+                                    <img class="d-block w-100" src={image1} alt="Watercolour painting of a bird"></img>
                                 </div>
                                 
                                 <div>

@@ -11,9 +11,13 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  border-bottom: 1px solid white;
+  margin: 0 ;
 }
+
+.navbar h1{
+  font-size: 3.5vw;
+}
+
 
 .navbar #link{
   color: black;
@@ -180,7 +184,9 @@
   color: white;
   background-color: black;
   width: 50px;
-  margin-right: 5%
+  margin-right: 5%;
+  margin-top: 1%;
+  font-size: 90%;
 }
 
 #langRow{
@@ -300,12 +306,21 @@
 
 /*confirmation*/ 
 
+.confirmation h1{
+  font-size: 3.5vw;
+}
+
+.confirmation h2{
+  font-size: 2.5vw;
+}
+
 #booking_table{
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   border-collapse: separate;
   border-spacing: 15px;
+  font-size: 1.5vw;
 }
 
 th{
