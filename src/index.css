@@ -102,6 +102,7 @@
 
 .classes #filters{
   text-align: left;
+  margin-bottom: 5%;
 }
 
 #class_details{
@@ -125,6 +126,10 @@
 
 #class_details td{
   padding-left: 2%;
+}
+
+#filters h4{
+  margin-top: 10%;
 }
 
 
