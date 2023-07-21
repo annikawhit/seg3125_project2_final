@@ -21,6 +21,8 @@ const Confirmation = (props) => {
                 </table>
             </div>  
 
+            <Link class="btn btn-secondary" id="conf_btn" to="/seg3125_project2_final">Back to Homepage</Link>
+
         </div>
     );
 }

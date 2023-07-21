@@ -138,7 +138,7 @@ const Register = (props) => {
                 </div>
             </form>
 
-            <button class="btn btn-dark" onClick={() => completeRegistration()}>Register</button>
+            <button class="btn btn-secondary" onClick={() => completeRegistration()}>Register</button>
         </div>
     );
 }
